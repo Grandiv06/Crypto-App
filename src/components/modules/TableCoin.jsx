@@ -2,7 +2,7 @@ import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 import { BeatLoader } from "react-spinners";
 import { marketChart } from "../../services/cryptoApi";
-import styles from "./Tablecoin.module.css";
+import styles from "./TableCoin.module.css";
 
 function TableCoin({ coins, loading, setChart }) {
   return (
@@ -50,7 +50,7 @@ const TableRow = ({ coin, setChart }) => {
       const res = await fetch(marketChart(id));
       const json = await res.json();
       console.log(json);
-      setChart({ ...json, coin  });
+      setChart({ ...json, coin });
     } catch (error) {
       setChart(null);
     }
